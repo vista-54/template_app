@@ -1,0 +1,13 @@
+.login{
+  background: rgb(255,255,255);
+  max-width: 800px;
+  min-width: 200px;
+  margin: 0 auto;
+  .btn-container{
+    text-align: center;
+  }
+}
+
+md-content.md-default-theme, md-content{
+  background-color: transparent;
+}

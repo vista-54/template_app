@@ -23,5 +23,5 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('app/content/css'));
 });
 gulp.task('sass:watch', function () {
-    gulp.watch('app/app.scss', ['sass', 'browser-reload']);
+    gulp.watch('app/templates/*/*.scss', ['sass', 'browser-reload']);
 });

@@ -4,13 +4,11 @@
     angular.module('app')
         .controller('HomepageController', HomepageController);
 
-    function HomepageController() {
+
+    HomepageController.$inject = ['data'];
+
+    function HomepageController(data) {
         let vm = this;
-        vm.openPreRegModal = openPreRegModal;
-
-        function openPreRegModal() {
-
-        }
-
+        console.log(data);
     }
 })();

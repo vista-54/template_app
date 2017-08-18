@@ -4,13 +4,13 @@
         .module('factory.request', [])
         .factory('http', http);
 
-    http.$inject = ['$http', '$sessionStorage', '$ionicLoading', '$q', '$timeout'];
+    http.$inject = ['$http', '$q', '$timeout', 'toastr'];
 
     /**
      * Wrapper over the standard http function
      */
 
-    function http($http, $sessionStorage, $ionicLoading, $q, $timeout) {
+    function http($http, $q, $timeout, toastr) {
         console.log('create request service');
 
         return {
@@ -57,12 +57,12 @@
                 config.data = data;
             }
 
-            if ($sessionStorage.auth_key) {
-                config.url = url + '?auth_key=' + $sessionStorage.auth_key;
-            }
-            else {
-                config.url = url;
-            }
+            // if ($sessionStorage.auth_key) {
+            //     config.url = url + '?auth_key=' + $sessionStorage.auth_key;
+            // }
+            // else {
+            config.url = url;
+            // }
 
             // $ionicLoading.show({
             //     templateUrl: 'views/lazyload/lazyload.html'
@@ -82,9 +82,9 @@
 
         function requestFile(url, data) {
 
-            if ($sessionStorage.auth_key) {
-                url = url + '?auth_key=' + $sessionStorage.auth_key;
-            }
+            // if ($sessionStorage.auth_key) {
+            //     url = url + '?auth_key=' + $sessionStorage.auth_key;
+            // }
 
             var ft = new FileTransfer();
 
@@ -118,23 +118,23 @@
 
             if (err.data == null || !err.data.error) {
                 if (err.status === 200) {
-                    window.plugins.toast.show('Server error: ' + err.data, 'long', 'center');
+                    toastr.error('Server error: ' + err.data);
                 }
                 else if (err.status === -1) {
-                    window.plugins.toast.show('Server is not available', 'long', 'center');
+                    toastr.error('Server is not available');
                 }
                 else if (err.status === 0) {
-                    window.plugins.toast.show('There is no Internet connection', 'long', 'center');
+                    toastr.error('There is no Internet connection');
                 }
                 else if (err.status === 500) {
-                    window.plugins.toast.show('Server error: ' + err.status + ' ' + err.data.message, 'long', 'center');
+                    toastr.error('Server error: ' + err.status + ' ' + err.data.message);
                 }
                 else {
-                    window.plugins.toast.show('Server error: ' + err.status + ' ' + err.statusText, 'long', 'center');
+                    toastr.error('Server error: ' + err.status + ' ' + err.statusText);
                 }
                 // console.log('XHR Failed: ' + err.status);
             } else {
-                window.plugins.toast.show(err.data.error, 'long', 'center');
+                toastr.error(err.data.error);
             }
 
 

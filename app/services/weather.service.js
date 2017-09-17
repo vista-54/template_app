@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('app.weather', [])
+    angular.module('service.weather', [])
         .service('weather', weather);
 
 

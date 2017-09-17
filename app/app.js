@@ -2,10 +2,10 @@
     angular.module('app',
         [
             'app.core',
-            'app.directives',
-            'app.request',
-            'app.services',
-            'app.filters',
+            'blocks.directives',
+            'blocks.request',
+            'blocks.services',
+            'blocks.filters',
 
         ])
         .run(runBlock);

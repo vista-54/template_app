@@ -1,8 +1,8 @@
 ;(function () {
     'use strict';
 
-    angular.module('app.services', [
-        'app.weather'
+    angular.module('blocks.services', [
+        'service.weather'
     ]);
 
 })();

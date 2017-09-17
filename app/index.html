@@ -21,7 +21,12 @@
 
 </head>
 <body>
-<div ng-include="'layout/shell/shell.html'"></div>
+
+<div id="page" class="main-container">
+
+    <div ui-view></div>
+
+</div>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>

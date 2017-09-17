@@ -8,9 +8,9 @@
     url.$inject = [];
 
     function url() {
-        let baseUrl = 'http://www.metoffice.gov.uk/pub/data/weather/uk/climate/stationdata/bradforddata.txt';
+        let baseUrl = 'http://api.openweathermap.org/data/2.5/';
         return {
-            firsturl: baseUrl
+            weather: baseUrl + 'weather'
         };
     }
 

@@ -64,10 +64,6 @@
             config.url = url;
             // }
 
-            // $ionicLoading.show({
-            //     templateUrl: 'views/lazyload/lazyload.html'
-            // });
-
             return $http(config)
                 .then(requestComplete)
                 .catch(requestFailed);

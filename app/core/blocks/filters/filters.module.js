@@ -2,7 +2,8 @@
 ;(function () {
     'use strict';
 
-    angular.module('app.filters', [
+    angular.module('blocks.filters', [
+        'filter.example'
     ]);
 
 })();

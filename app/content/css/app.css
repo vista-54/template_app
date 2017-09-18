@@ -1,16 +1,13 @@
-.item {
-  width: 100%; }
+.homepage .title {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 15px; }
 
-.item-first {
-  background-image: url("../img/bg_homepage_1.png"); }
-
-.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
-  color: white; }
-
-md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
-  background-color: transparent; }
-  md-toolbar.md-default-theme:not(.md-menu-toolbar) a, md-toolbar:not(.md-menu-toolbar) a {
-    margin: 0 10px; }
+.homepage .temp, .homepage .wind {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background: #fefefe; }
 
 .login {
   background: white;

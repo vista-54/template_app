@@ -25,3 +25,8 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
     gulp.watch('app/templates/*/*.scss', ['sass', 'browser-reload']);
 });
+
+gulp.task('start', ['sass', 'browser-sync'], function () {
+    gulp.watch('app/templates/*/*.scss', ['sass', 'browser-reload']);
+    gulp.watch('app/**/*.js', ['browser-reload']);
+});

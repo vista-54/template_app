@@ -21,7 +21,12 @@
 
 </head>
 <body>
-<div ng-include="'layout/shell/shell.html'"></div>
+
+<div id="page" class="main-container">
+
+    <div ui-view></div>
+
+</div>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -30,18 +35,31 @@
 <script src="bower_components/angular-messages/angular-messages.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
 <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
 <script src="app.js"></script>
 <script src="core/core.module.js"></script>
 <script src="core/core.config.js"></script>
-<script src="core/request.js"></script>
-<script src="core/url.js"></script>
 <script src="core/blocks/directives/directives.module.js"></script>
 <script src="core/blocks/filters/filters.module.js"></script>
 <script src="core/blocks/request/request.module.js"></script>
 <script src="core/blocks/services/services.module.js"></script>
 
 
+<!--services-->
+<script src="services/weather.service.js"></script>
+
+<!--factories-->
+<script src="factories/request.js"></script>
+<script src="factories/url.js"></script>
+
+<!--filters-->
+<script src="filters/example.filter.js"></script>
+
+<!--directives-->
+
+<!--controllers-->
 <script src="templates/homepage/homepage.controller.js"></script>
-<script src="templates/homepage/weather.model.js"></script>
+
+
 </body>
 </html>

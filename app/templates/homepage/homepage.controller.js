@@ -9,6 +9,7 @@
 
     function HomepageController(data) {
         let vm = this;
-        console.log(data);
+
+        vm.weather = data;
     }
 })();

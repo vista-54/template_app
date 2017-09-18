@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    angular.module('app.request', [
+    angular.module('blocks.request', [
         'factory.url',
         'factory.request'
     ]);

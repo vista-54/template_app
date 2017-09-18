@@ -1,16 +1,13 @@
-.item {
-  width: 100%;
-}
-.item-first{
-  background-image: url("../img/bg_homepage_1.png");
-}
-
-.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
-  color: white; }
-md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){
-  background-color: transparent;
-  a{
-    margin: 0 10px;
+.homepage {
+  .title {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 15px;
+  }
+  .temp, .wind {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background: #fefefe;
   }
 }
-
